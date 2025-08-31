@@ -1,44 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.1 on win32)" generated="20200511 15:16:08.371" rpa="false">
-<suite id="s1" name="GroupTest" source="E:\OnlyForPython\SELENIUM\RobotFramework\robot-framework-example\test_cases\GroupTest.robot">
-<test id="s1-t1" name="TC1">
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>Home page</arg>
-</arguments>
-<status status="PASS" starttime="20200511 15:16:08.429" endtime="20200511 15:16:08.429"></status>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-08-31T09:41:00.731495" rpa="false" schemaversion="5">
+<suite id="s1" name="BrowserNavigation" source="c:\JavaProjects\robot-framework-example\test_cases\BrowserNavigation.robot">
+<test id="s1-t1" name="Handle Browser Windows" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-31T09:41:01.233448" level="INFO">Opening browser 'chrome' to base url 'http://demo.automationtesting.in/Windows.html'.</msg>
+<arg>http://demo.automationtesting.in/Windows.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-31T09:41:01.232727" elapsed="4.976367"/>
 </kw>
-<tags>
-<tag>sanity</tag>
-</tags>
-<status status="PASS" starttime="20200511 15:16:08.428" endtime="20200511 15:16:08.430" critical="yes"></status>
-</test>
-<test id="s1-t2" name="TC3">
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>Contact Us</arg>
-</arguments>
-<status status="PASS" starttime="20200511 15:16:08.432" endtime="20200511 15:16:08.432"></status>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-31T09:41:06.210840" elapsed="0.120117"/>
 </kw>
-<tags>
-<tag>sanity</tag>
-</tags>
-<status status="PASS" starttime="20200511 15:16:08.431" endtime="20200511 15:16:08.433" critical="yes"></status>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-08-31T09:41:06.359885" level="INFO">${location} = https://demo.automationtesting.in/Windows.html</msg>
+<var>${location}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-08-31T09:41:06.333623" elapsed="0.027162"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${location}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-31T09:41:06.363471" elapsed="0.002087"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-08-31T09:41:06.369838" level="INFO">Opening url 'https://www.selenium.dev/selenium/docs/api/java/index'</msg>
+<arg>https://www.selenium.dev/selenium/docs/api/java/index</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-08-31T09:41:06.368536" elapsed="2.014817"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-08-31T09:41:08.406201" level="INFO">${location} = https://www.selenium.dev/selenium/docs/api/java/index</msg>
+<var>${location}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-08-31T09:41:08.386470" elapsed="0.020388"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${location}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-31T09:41:08.408730" elapsed="0.001463"/>
+</kw>
+<kw name="Go Back" owner="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" start="2025-08-31T09:41:08.411828" elapsed="0.040931"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-08-31T09:41:10.361721" level="INFO">${location} = https://demo.automationtesting.in/Windows.html</msg>
+<var>${location}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-08-31T09:41:08.455637" elapsed="1.906560"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${location}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-08-31T09:41:10.371602" elapsed="0.001758"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-08-31T09:41:10.375651" elapsed="2.414005"/>
+</kw>
+<status status="PASS" start="2025-08-31T09:41:01.231058" elapsed="11.562014"/>
 </test>
-<status status="PASS" starttime="20200511 15:16:08.374" endtime="20200511 15:16:08.435"></status>
+<status status="PASS" start="2025-08-31T09:41:00.741263" elapsed="12.058410"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0">Critical Tests</stat>
-<stat pass="2" fail="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0">sanity</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" id="s1" name="GroupTest">GroupTest</stat>
+<stat name="BrowserNavigation" id="s1" pass="1" fail="0" skip="0">BrowserNavigation</stat>
 </suite>
 </statistics>
 <errors>
