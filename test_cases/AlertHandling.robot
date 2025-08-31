@@ -14,7 +14,7 @@ To Perform Select Option with Drop Down list
     sleep   2
    # handle alert    accept      # for ok
     # Handle Alert    dismiss   # for cancel
-    Alert Should Be Present     Press a button!
+    Alert Should Be Present     I am an alert box!
     Close All Browsers
 
 
